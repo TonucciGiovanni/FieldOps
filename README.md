@@ -13,7 +13,7 @@
 |------|-----------|-------------|----------|
 | ![Home](./screenshots/home.png) | ![Tasks](./screenshots/tasks.png) | ![Detail](./screenshots/detail.png) | ![Add](./screenshots/add.png) |
 
-> Screenshots taken on Expo Go — iOS and Android
+> Screenshots taken on Expo Go iOS and Android
 
 ---
 
@@ -22,39 +22,39 @@
 FieldOps is a field technician task tracker built for IoT infrastructure 
 teams operating across Kenya's 47 counties. Technicians use it to log 
 site visits, manage work orders, track task progress through checklists, 
-and maintain a record of completed jobs — all with full offline support 
+and maintain a record of completed jobs all with full offline support 
 through local persistence.
 
 The app covers real-world field operations workflows: an installation 
 technician in Kisumu can create a task, work through a checklist on 
 site, update the status to completed, and see their performance stats 
-update on the profile screen — all without an internet connection.
+update on the profile screen all without an internet connection.
 
 ---
 
 ## Features
 
-- **Dashboard** — Personalised greeting, daily task summary, stat cards, 
+- **Dashboard** Personalised greeting, daily task summary, stat cards, 
   and recent activity feed
-- **Full CRUD task management** — Create, view, edit, and delete tasks 
+- **Full CRUD task management** Create, view, edit, and delete tasks 
   with full form validation
-- **Priority system** — Four levels: Critical, High, Medium, Low with 
+- **Priority system** Four levels: Critical, High, Medium, Low with 
   colour-coded visual indicators throughout
-- **Status workflow** — Pending → In Progress → Completed → Cancelled 
+- **Status workflow** Pending → In Progress → Completed → Cancelled 
   with one-tap status updates
-- **Interactive checklists** — Per-task checklists with completion 
+- **Interactive checklists** Per-task checklists with completion 
   progress bar and tap-to-toggle items
-- **Advanced filtering** — Filter by status and priority simultaneously, 
+- **Advanced filtering** Filter by status and priority simultaneously, 
   with live search across title, county, and site ID
-- **Persistent local storage** — Tasks survive app restarts via Zustand 
+- **Persistent local storage** Tasks survive app restarts via Zustand 
   persist middleware and AsyncStorage
-- **Completed tasks archive** — Full history of finished work sorted 
+- **Completed tasks archive** Full history of finished work sorted 
   by completion date
-- **Technician profile** — Performance stats including completion rate, 
+- **Technician profile** Performance stats including completion rate, 
   active task count, and total completed
-- **County-based organisation** — Tasks tagged by Kenyan county and 
+- **County-based organisation** Tasks tagged by Kenyan county and 
   site ID for field team context
-- **TypeScript throughout** — Fully typed components, store, navigation, 
+- **TypeScript throughout** Fully typed components, store, navigation, 
   and data layer
 
 ---
@@ -76,7 +76,7 @@ update on the profile screen — all without an internet connection.
 
 ## Project Structure
 FieldOps/
-├── App.tsx                          # Entry point — NavigationContainer
+├── App.tsx                          # Entry point NavigationContainer
 │                                    # + SafeAreaProvider
 └── src/
 ├── types.ts                     # Task, ChecklistItem, Technician
@@ -86,7 +86,7 @@ FieldOps/
 │                                # font sizes
 ├── store/
 │   └── useTaskStore.ts          # Zustand store with AsyncStorage
-│                                # persistence — all state and actions
+│                                # persistence all state and actions
 ├── navigation/
 │   ├── AppNavigator.tsx         # Bottom tab navigator
 │   └── TaskStackNavigator.tsx   # Stack navigator for task flow
