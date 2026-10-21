@@ -132,29 +132,29 @@ Kenyan counties so you can explore all features immediately.
 
 ## Architecture Notes
 
-**Persistent state** — The Zustand store uses the `persist` middleware 
+**Persistent state** The Zustand store uses the `persist` middleware 
 with AsyncStorage as the storage engine. Every task creation, update, 
 status change, and checklist toggle is automatically persisted to the 
 device. Tasks survive app restarts with no extra code in the components.
 
-**Stack inside Tabs navigation** — The Tasks tab contains a full stack 
+**Stack inside Tabs navigation** The Tasks tab contains a full stack 
 navigator (TaskList → TaskDetail → EditTask). This means drilling into 
 a task pushes a new screen onto the stack while keeping the bottom tabs 
 visible. The Add Task tab uses a `tabPress` listener to navigate 
 imperatively to AddTaskScreen as a modal rather than switching tabs.
 
-**CRUD pattern** — All data operations go through the Zustand store:
-- `addTask` — generates UUID, sets timestamps, prepends to tasks array
-- `updateTask` — maps over tasks, merges updates into matching ID
-- `updateTaskStatus` — updates status, sets completedAt if completed, 
+**CRUD pattern** All data operations go through the Zustand store:
+- `addTask` generates UUID, sets timestamps, prepends to tasks array
+- `updateTask` maps over tasks, merges updates into matching ID
+- `updateTaskStatus` updates status, sets completedAt if completed, 
   increments technician stats
-- `toggleChecklistItem` — nested update: finds task, finds item, 
+- `toggleChecklistItem` nested update: finds task, finds item, 
   toggles completed boolean
-- `deleteTask` — filters out matching ID
+- `deleteTask` filters out matching ID
 
-**Computed getters** — `getFilteredTasks()` and `getStats()` use 
+**Computed getters** `getFilteredTasks()` and `getStats()` use 
 `get()` to read current state and compute derived values. Components 
-call these directly — no selector libraries needed.
+call these directly no selector libraries needed.
 
 ---
 
@@ -165,7 +165,7 @@ call these directly — no selector libraries needed.
 - [ ] GPS check-in when technician arrives on site
 - [ ] Offline sync when connectivity is restored
 - [ ] Push notifications for new task assignments
-- [ ] Team view — see tasks assigned to other technicians
+- [ ] Team view see tasks assigned to other technicians
 - [ ] Export completed task report as PDF
 
 ---
